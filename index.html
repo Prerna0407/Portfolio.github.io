@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="index.css">
+      <script>
+        //</script><script type="text/babel">
+ 
+  alert("welcome to my portfoilo")
+  $(document).ready(function () {
+      'use strict';
+  
+      setTimeout(function () {
+          $('.loader_bg').fadeToggle();
+      }, 1500);
+  alert("Thanks For Watching :)")
+      $(window).on('scroll', function () {
+          if ($(document).scrollTop() > 200) {
+              $(".navbar").css({ "background-color": "#ffffff", "transition": "all 0.8s ease-in-out", "box-shadow": "0px 3px 4.6px 0.3px rgba(0, 0, 0, 0.25)" });
+              $(".navbar-collapse").css("background-color", "transparent");
+          } else {
+              $(".navbar").css({ "background-color": "transparent", "box-shadow": "none" });
+          }
+      });
+  
+      var element = $(".text-affect");
+      $(function () {
+          element.typed({
+              strings: ["Hello", "I Am ", "Prerna ingale", "I Study In " ,"Computer science Engineering", "I Love Coding", "So Much", "And Wants To", "Became A Front End Developer"],
+              loop: true,
+              typeSpeed: 90
+          });
+      });
+      $('.skillbar').each(function () {
+          $(this).find('.skillbar-bar').animate({
+              width: $(this).attr('data-percent')
+          }, 6000);
+      });
+  
+      $('.view').magnificPopup({
+          type: 'image',
+          gallery: {
+              enabled: true
+          },
+          zoom: {
+              enabled: true,
+              duration: 300,
+              opener: function (element) {
+                  return element.find('img');
+              }
+          }
+      });
+  
+      $("#review-slider").owlCarousel({
+          items: 1,
+  
+          itemsDesktop: [1000, 1],
+  
+          itemsDesktopSmall: [979, 1],
+  
+          itemsTablet: [768, 1],
+  
+          pagination: true,
+  
+          navigation: false,
+  
+          slideSpeed: 1000,
+  
+          singleItem: false,
+  
+          autoplay: true,
+  
+          loop: true
+      });
+      
+      $("#collapsibleNavbar").click(function(){
+      $("#collapsibleNavbar").hide();
+    });
+      $("#colnav").click(function(){
+      $("#collapsibleNavbar").toggle();
+    });
+  
+  });
+    
+</script>
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- meta tags and title -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="author" content="Arafat Hossain Ar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Design - Prerna ingale</title>
+
+    <!-- bootstrap, fontawesome and jqeury cdn import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Owl carousel css-->
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1apMwUBHtHTGIicPtTfjBlL1tgkn8W0YA">
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1SgjQj1vA3PV4diexMA7mKao-zg8mnlpj">
+   <!-- Animation Css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+  <!-- body start here -->
+  
+  <body>
+      <!-- navbar start here -->
+      <div class="navbar navbar-expand-md fixed-top">
+          <a href="#home" class="navbar-brand">Prerna Ingale</a>
+          <button class="navbar-toggler" id="colnav" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"> <i class="fa fa-bars"></i> </span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#timeline">Timeline</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!-- navbar end here -->
+  
+      <!--slider area starts-->
+      <div id="home"></div>
+      <div class="banner-area" id="slider-area">
+          <div id="particles-js"></div>
+          <div class="banner-table">
+              <div class="banner-table-cell">
+                  <div class="welcome-text">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <h2>Prerna Ingale</h2>
+                                  <div class="text-affect"></div>
+                                  <p class="banner-btn"><a href="#contact">Contact Now</a></p>
+                                  <div class="clearfix"></div>
+                                  <div class="mouse-icon hidden-sm hidden-xs">
+                                      <div class="wheel"></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!--slider area ends-->
+  
+      <!-- about start here -->
+      <div class="about-area" id="about">
+          <h2 class="text-center">About</h2>
+          <hr class="line1">
+          <hr class="line2">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 col-md-5 col-xl-5">
+                      <div class="about-left" data-aos="fade-down-left" data-aos-duration="1500">
+                          <img class="img-fluid img-thumbnail " src="" />
+                      </div>
+                  </div>
+                  <div class="col-xl-7 col-sm-12 col-md-7">
+                      <div class="about-right " data-aos="fade-down-right" data-aos-duration="1500">
+                          <h1>Hi! I'm <span class="text-info">Prerna Ingale</span>. I’m a Engineering Student & In Third year</h1>
+                          <p>
+                              “I Wants To Became A Web designer & Developer. That means I make websites both
+                              beautiful and easy to use—I can make a lot of amorphous content look clean and easy to
+                              understand. I also take a lot of pleasure in coding mine and other people’s designs to make
+                              them work online.”
+                          </p>
+                          <div class="socials">
+                              <ul>
+                                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <!-- about start here -->
+  
+      <!-- timeline start here -->
+      <div class="timeline-area" id="timeline">
+          <h2 class="text-center">Timeline</h2>
+          <hr class="line1">
+          <hr class="line2">
+          <div class="container">
+              <h4 class="text-center" style="font-family: 'Bebas Neue', cursive;">Education</h4>
+              <hr class="line2">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="main-timeline">
+                          <div class="timeline" data-aos="fade-up-left" data-aos-duration="1500">
+                              <div class="timeline-icon"><span class="year">2023</span></div>
+                              <div class="timeline-content">
+                                  <h3 class="title">COMPUTER SCIENCE ENGINEERING </h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                      amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                      arcu.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="timeline" data-aos="fade-up-right" data-aos-duration="2000">
+                              <div class="timeline-icon"><span class="year">2019</span></div>
+                              <div class="timeline-content">
+                                  <h3 class="title">HSC IN TECHNICAL SCIENCE</h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                      amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                      arcu.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="timeline " data-aos="fade-up-left" data-aos-duration="1500">
+                              <div class="timeline-icon"><span class="year">2017</span></div>
+                              <div class="timeline-content">
+                                  <h3 class="title">SSC IN SCIENCE</h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit
+                                      amet porttitor eget dolor. Blandit libero volutpat sed cras ornare arcu dui vivamus
+                                      arcu.
+                                  </p>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      <!-- timeline end here -->
+  
+      <!-- services start here -->
+      <div class="services-area" id="services">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <h2 class="text-center">Services</h2>
+                      <hr class="line1">
+                      <hr class="line2">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="single-services text-center" data-aos="fade-up" data-aos-duration="2000">
+                          <div class="services-icon">
+                              <i class="fa fa-superpowers"></i>
+                          </div>
+                          <div class="services-content">
+                              <h3>UI/UX Design</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                  ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                  euismod elementum..</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="single-services text-center " data-aos="fade-down" data-aos-duration="2000">
+                          <div class="services-icon">
+                              <i class="fa fa-bar-chart"></i>
+                          </div>
+                          <div class="services-content">
+                              <h3>Web Design</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                  ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                  euismod elementum.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="single-services text-center" data-aos="fade-top" data-aos-duration="2000">
+                          <div class="services-icon">
+                              <i class="fa fa-bell-o"></i>
+                          </div>
+                          <div class="services-content">
+                              <h3>Web Development</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                  ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                  euismod elementum.</p>
+                          </div>
+                      </div>
+                  </div>
+            
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                      <div class="single-services text-center" data-aos="fade-down-left" data-aos-duration="2000">
+                          <div class="services-icon">
+                              <i class="fa fa-mobile-phone"></i>
+                          </div>
+                          <div class="services-content">
+                              <h3>Android Application</h3>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                  ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare aenean
+                                  euismod elementum.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- services start here -->
+  
+      <!-- gallery start here -->
+      <div class="gallery-area" id="gallery">
+          <h2 class="text-center">Gallery</h2>
+          <hr class="line1">
+          <hr class="line2">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-4" data-aos="fade-down-left" data-aos-duration="1500">
+                      <div class="project-items">
+                          <a class="view img"
+                              href="https://i.ibb.co/rbKDbwT/arafat3.jpg">
+                              <img src="https://i.ibb.co/rbKDbwT/arafat3.jpg" alt="">
+                          </a>
+                          <div class="project-text">
+                              <h2>Website Design</h2>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-4" data-aos="fade-up-left" data-aos-duration="1500">
+                      <div class="project-items">
+                          <div class="project-text">
+                              <h2>Website Development</h2>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-4" data-aos="fade-down-right" data-aos-duration="1500">
+                          <div class="project-text">
+                              <h2>Website Design</h2>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- gallery end here -->
+  
+
+  
+      <!-- contact start here -->
+      <div id="contact" class="contact-area">
+          <div class="container">
+              <h2 class="text-center">Contact</h2>
+              <hr class="line1">
+              <hr class="line2">
+              <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                      <div class="top-contact">
+                          <div class="row">
+                              <div class="col-sm-4 col-md-4">
+                                  <div class="top-contact-text " data-aos="fade-up-right" data-aos-duration="1500">
+                                      <div class="contact-icon">
+                                          <ul>
+                                              <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                                          </ul>
+                                      </div>
+                                      <h2>Address / Street</h2>
+                                      <p>Maharastra ,India</p>
+                                  </div>
+                              </div>
+                              <div class="col-sm-4 col-md-4">
+                                  <div class="top-contact-text" data-aos="fade-down-left" data-aos-duration="1500">
+                                      <div class="contact-icon">
+                                          <ul>
+                                              <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                                          </ul>
+                                      </div>
+                                      <h2>Contact Number</h2>
+                                      <p> - 1xx - 932xxxxx35</p>
+                                  </div>
+                              </div>
+                              <div class="col-sm-4 col-md-4">
+                                  <div class="top-contact-text" data-aos="fade-up-right" data-aos-duration="1500">
+                                      <div class="contact-icon">
+                                          <ul>
+                                              <li><a href="#"><i class="fa fa-globe"></i></a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 box-contact-form">
+                      <form id="contact-form" method="post" action="contact.php">
+                          <div class="messages"></div>
+                          <div class="controls">
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <input id="form_name" type="text" name="name" class="form-control"
+                                              placeholder="Enter your full name *" required="required"
+                                              data-error="Fullname is required.">
+                                          <div class="help-block with-errors"></div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <input id="form_email" type="email" name="email" class="form-control"
+                                              placeholder="Enter your email *" required="required"
+                                              data-error="Valid email is required.">
+                                          <div class="help-block with-errors"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="form-group">
+                                          <textarea id="form_message" name="message" class="form-control"
+                                              placeholder="Your Message *" rows="4" required="required"
+                                              data-error="Leave a message for me"></textarea>
+                                          <div class="help-block with-errors"></div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                      <button class="btn btn-send" value="">Send message</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- contact end here -->
+  
+      <div class="footer-area">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xl-12">
+                      <p class="text-center text-white">&copy; All Right Reserved by <a class="text-success"
+                              href="">Prerna Ingale</a>
+                      </p>
+                      <hr style="border-top: 2px solid wheat; width: 80%; margin: auto;">
+                      <div class="footer-social">
+                          <ul align="center">
+                            <li><a href="https://github.com/Prerna0407/"><i class="fa fa-github"></i></a></li>
+                              <li><a href="https://www.facebook.com/prerna.ingale.58"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="https://www.sololearn.com/Profile/19621324/?ref=app"><i class="fa fa-sololearn"></i></a></li>
+                              <li><a href="https://www.linkedin.com/in/prerna-ingale-9b05a61a7"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="https://codepen.io/Prerna4"><i class="fa fa-codepen"></i></a></li>
+                              
+                              
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Javascript resources-->
+      <script type="text/babel">
+          AOS.init();
+      </script>
+      <script src="js/script.js"></script>
+      <!--particle js-->
+      <script src="https://drive.google.com/uc?export=view&id=1lHQUWhq5HPUIYmascoOLR88iQqZEUhNn"></script>
+      <script src="https://drive.google.com/uc?export=view&id=1IEQhWSl1N_iOfMeRyQK5RH5zatBzobKM"></script>
+      <!--Owl Carousel js-->
+      <script src="https://drive.google.com/uc?export=view&id=1p9lXrRPGzD92jY6tvoD_SREzccAKWLma"></script>
+      <!--Typed js-->
+      <script src="https://drive.google.com/uc?export=view&id=1prJaoCHxYQ-rE1_LOq8AJwCDQ3adp0I_"></script>
+      <!--Validator js-->
+      <script src="https://drive.google.com/uc?export=view&id=1OMFI9uYjqSdNNi8TDhS9EqpPfDNFJCGT"></script>
+      <!--Magnific popup js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+      <!-- Load Babel -->
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  </body>
+  <!-- body end here -->
+  
+  </html>
